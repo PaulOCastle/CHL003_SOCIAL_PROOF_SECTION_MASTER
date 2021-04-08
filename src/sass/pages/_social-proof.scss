@@ -1,0 +1,19 @@
+.hero-section {
+  padding: 3.75rem 1.5rem 0 1.5rem; // 60px 24px 0px 24px
+
+  &.responsive {
+    @include responsive-down(laptop) {
+      padding: 8.125rem 10.3125rem 0 10.3125rem; // 130px 165px 0px 165px
+    }
+  }
+}
+
+.reviews-section {
+  padding: 0 1.5rem 6.1875rem 1.5rem; // 0px 24px 99px 24px
+
+  &.responsive {
+    @include responsive-down(laptop) {
+      padding: 0 10.3125rem 6rem 10.3125rem; // 0 165px 96px 165px
+    }
+  }
+}

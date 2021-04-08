@@ -1,0 +1,18 @@
+/* Main Styles of the Project */
+
+// IMPORTS OF FONTS
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+// HELPERS
+@import './helpers/variables';
+@import './helpers/mixins';
+
+// GLOBALS
+@import './globals/resets';
+@import './globals/commons';
+
+// COMPONENTS
+@import './components/cards';
+
+// PAGES
+@import './pages/social-proof';

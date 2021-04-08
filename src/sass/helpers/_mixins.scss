@@ -1,0 +1,26 @@
+/* SHORTCUT */
+
+@mixin flex ($direction: null, $justify: null, $a-items: null) {
+  display: flex;
+  @if $direction != null {flex-direction: $direction;}
+  @if $justify != null {justify-content: $justify;}
+  @if $a-items != null {align-items: $a-items;}
+}
+
+@mixin flex-content ($a-content) {
+  align-content: $a-content;
+}
+
+/* RESPONSIVENESS */
+
+@mixin responsive-up ($devise) {
+  @media only screen and (max-width: map-get($breakpoints-up, $devise)) {
+    @content;
+  }
+}
+
+@mixin responsive-down ($devise) {
+  @media only screen and (min-width: map-get($breakpoints-down, $devise)) {
+    @content;
+  }
+}

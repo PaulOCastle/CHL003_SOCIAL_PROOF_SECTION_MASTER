@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap);
+/* Main Styles of the Project */
+/* BREAKPOINTS */
+/* COLORS */
+/* TYPOGRAPHY */
+/* SHORTCUT */
+/* RESPONSIVENESS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address,
+big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer, header, main, nav, output, ruby, section, summary, time, mark,
+audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button, input, select, textarea {
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* FRONTEND MENTOR STYLES */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/* COMMON STYLES */
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #502050;
+}
+
+main {
+  background: url(../images/bg-pattern-top-mobile.svg) no-repeat top left, url(../images/bg-pattern-bottom-mobile.svg) no-repeat bottom right;
+  background-size: 23em, auto;
+}
+
+.hero-section {
+  padding: 3.75rem 1.5rem 0 1.5rem;
+}
+@media only screen and (min-width: 63.9375em) {
+  .hero-section.responsive {
+    padding: 8.125rem 10.3125rem 0 10.3125rem;
+  }
+}
+
+.reviews-section {
+  padding: 0 1.5rem 6.1875rem 1.5rem;
+}
+@media only screen and (min-width: 63.9375em) {
+  .reviews-section.responsive {
+    padding: 0 10.3125rem 6rem 10.3125rem;
+  }
+}
+
+/*# sourceMappingURL=main.bundle.css.map*/
