@@ -1,19 +1,115 @@
 .hero-section {
-  padding: 3.75rem 1.5rem 0 1.5rem; // 60px 24px 0px 24px
+  width: 100%;
+  @include flex(column, center, center);
+  padding: 1rem 0; // 16px 0
+
+  .hero-statement {
+    width: 100%;
+    height: 14.75rem; // 236px
+    @include flex(column, space-between, center);
+    padding-bottom: .5rem; // 8px
+
+    h1 {
+      text-align: center;
+      font-weight: $font-bold;
+      font-size: $font-l;
+      line-height: 99%;
+      letter-spacing: -0.04em;
+      color: $very-dark-magenta;
+    }
+
+    p {
+      text-align: center;
+      font-weight: $font-regular;
+      font-size: $font-m;
+      line-height: 167%;
+      letter-spacing: -0.04em;
+      color: $dark-grayish-magenta;
+    }
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 18.8125rem; // 301px
+    @include flex(column, space-between, center);
+    padding: 2rem 0 0; // 32px 0 0;
+
+    .rate-frame {
+      @include flex(row, flex-start, center);
+    }
+  }
 
   &.responsive {
-    @include responsive-down(laptop) {
-      padding: 8.125rem 10.3125rem 0 10.3125rem; // 130px 165px 0px 165px
+    @include responsive-down(xl) {
+      @include flex(row, center, center);
+      padding: 0 0 1rem; // 0 0 16px
+
+      .hero-statement {
+        width: auto;
+        height: 14.6875rem; // 235px
+        @include flex(column, space-between, flex-start);
+        padding: 0 8.75rem 0 0; // 0 140px 0 0
+
+        h1 {
+          font-size: $font-xl;
+          line-height: 103%;
+          text-align: left;
+        }
+
+        p {
+          font-size: $font-m;
+          line-height: 167%;
+          text-align: left;
+        }
+      }
+
+      .hero-image {
+        height: 14.6875rem; // 235px
+        padding: 1.09375rem 0; // 17.5px 0
+
+        .rate-frame {
+          width: 33.625rem; // 538px
+        }
+
+        :nth-child(2) {
+          justify-content: center;
+        }
+
+        :nth-child(3) {
+          justify-content: flex-end;
+        }
+      }
     }
   }
 }
 
 .reviews-section {
-  padding: 0 1.5rem 6.1875rem 1.5rem; // 0px 24px 99px 24px
+  @include flex(column, space-between, center);
+  width: 100%;
+  min-height: 52.5625rem; // 841px
+  padding: 2rem 0; // 32px 0
+
+  .review-frame {
+    @include flex(column, flex-start, center);
+  }
 
   &.responsive {
-    @include responsive-down(laptop) {
-      padding: 0 10.3125rem 6rem 10.3125rem; // 0 165px 96px 165px
+    @include responsive-down(xl) {
+      @include flex(row, space-between, center);
+      min-height: auto;
+      padding: 0;
+
+      .review-frame {
+        height: 16.6875rem; // 267px
+      }
+
+      :nth-child(2) {
+        justify-content: center;
+      }
+
+      :nth-child(3) {
+        justify-content: flex-end;
+      }
     }
   }
 }

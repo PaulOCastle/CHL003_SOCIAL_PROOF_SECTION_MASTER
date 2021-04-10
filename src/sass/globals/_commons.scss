@@ -1,29 +1,48 @@
-/* FRONTEND MENTOR STYLES */
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  margin: 1rem 0; // 16px
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
-
 /* COMMON STYLES */
 
 body {
+  width: 100vw;
+  background:
+          url(../images/bg-pattern-top-mobile.svg) no-repeat top,
+          url(../images/bg-pattern-bottom-mobile.svg) no-repeat bottom;
   font-family: $primary-font;
   font-size: $font-m;
   font-weight: $font-regular;
   color: $very-dark-magenta;
+
+  &.responsive {
+    @include responsive-down(xl) {
+      background:
+              url(../images/bg-pattern-top-desktop.svg) no-repeat top left,
+              url(../images/bg-pattern-bottom-desktop.svg) no-repeat bottom right;
+      background-size: 36.5em  22.625em, 67.8125em 42.0625em; // 584px 362px, 1085px 673px
+    }
+  }
 }
 
 main {
-  background:
-          url(../images/bg-pattern-top-mobile.svg) no-repeat top left,
-          url(../images/bg-pattern-bottom-mobile.svg) no-repeat bottom right;
-  background-size: 23em, auto; // 368px auto
+  @include flex(column, center, center);
+  padding: 4rem 1.5rem; // 64px 24px
+
+  &.responsive {
+    @include responsive-down(xl) {
+      height: 50.0625rem; // 801px
+      @include flex(column, space-between, center);
+      padding: 8rem 10.5rem 6.25rem; // 128px 168px 100px
+    }
+  }
 }
 
 footer {
+  background: #333333;
 
+  .attribution {
+    font-size: .5rem; // 8px
+    text-align: center;
+    padding: 1rem 0; // 16px
+    color: #ffffff;
+  }
+  .attribution a {
+    color: #cccccc;
+  }
 }
