@@ -1,8 +1,12 @@
 .card {
+  /* MOBILE 1st STYLES 375px */
+
   @include flex(column, center, center);
   border-radius: .4375rem; // 7px
 
   &.card-rate {
+    /* MOBILE 1st STYLES 375px */
+
     width: 20.4375rem; // 327px
     height: 4.9375rem; // 79px
     @include flex(column, space-between, center);
@@ -23,7 +27,42 @@
       color: $very-dark-magenta;
     }
 
-    @include responsive-down(xl) {
+    /* RESPONSIVE STYLES */
+
+    // Tablet 768px
+    @include responsive(m) {
+      width: 27.8125rem; // 445px
+      height: 3.5rem; // 56px
+      @include flex(row, start, center);
+
+      .stars {
+        width: 11.3125rem; // 181px
+        padding: 0 2rem; // 0 32px
+      }
+
+      p {
+        text-align: left;
+      }
+    }
+
+    // Laptop 1024px
+    @include responsive(l) {
+      width: 27.8125rem; // 445px
+      height: 3.5rem; // 56px
+      @include flex(row, start, center);
+
+      .stars {
+        width: 11.3125rem; // 181px
+        padding: 0 2rem; // 0 32px
+      }
+
+      p {
+        text-align: left;
+      }
+    }
+
+    // Desktop 1440px
+    @include responsive(xl) {
       width: 27.8125rem; // 445px
       height: 3.5rem; // 56px
       @include flex(row, start, center);
@@ -40,6 +79,8 @@
   }
 
   &.card-review {
+    /* MOBILE 1st STYLES 375px */
+
     width: 20.4375rem; // 327px
     height: 15.5625rem; // 249px
     padding: 2.5rem 1.8rem 2rem 2rem; // 40px 28.8px 32px 32px
@@ -99,7 +140,14 @@
       }
     }
 
-    @include responsive-down(xl) {
+    /* RESPONSIVE STYLES */
+
+    // Tablet 768px
+
+    // Laptop 1024px
+
+    // Desktop 1440px
+    @include responsive(xl) {
       width: 21.875rem; // 350px
       height: 14.6875rem; // 235px
       padding: 2.5rem 1.8125rem 2rem 2rem; // 40px 29px 32px 32px

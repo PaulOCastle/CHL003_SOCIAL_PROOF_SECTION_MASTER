@@ -1,6 +1,11 @@
-/* COMMON STYLES */
+/* TODO:
+ *  1. Responsiveness for xxl size: design & implement
+ *  2. Adjust responsive m, l & xl sizes
+ */
 
 body {
+  /* MOBILE 1st STYLES 375px */
+
   width: 100vw;
   background:
           url(../images/bg-pattern-top-mobile.svg) no-repeat top,
@@ -10,26 +15,62 @@ body {
   font-weight: $font-regular;
   color: $very-dark-magenta;
 
-  &.responsive {
-    @include responsive-down(xl) {
-      background:
-              url(../images/bg-pattern-top-desktop.svg) no-repeat top left,
-              url(../images/bg-pattern-bottom-desktop.svg) no-repeat bottom right;
-      background-size: 36.5em  22.625em, 67.8125em 42.0625em; // 584px 362px, 1085px 673px
-    }
+  /* RESPONSIVE STYLES */
+
+  // Tablet 768px
+  @include responsive(m) {
+    background:
+            url(../images/bg-pattern-top-desktop.svg) no-repeat top left,
+            url(../images/bg-pattern-bottom-desktop.svg) no-repeat bottom right;
+    background-size: 30.75em  19.0625em, 39.625em 24.5625em; // 492px 305px, 634px 393px
+  }
+
+  // Laptop 1024px
+  @include responsive(l) {
+    background:
+            url(../images/bg-pattern-top-desktop.svg) no-repeat top left,
+            url(../images/bg-pattern-bottom-desktop.svg) no-repeat bottom right;
+    background-size: 30.75em  19.0625em, 48.625em 30.125em; // 492px 305px, 778px 482px
+  }
+
+  // Desktop 1440px
+  @include responsive(xl) {
+    background:
+            url(../images/bg-pattern-top-desktop.svg) no-repeat top left,
+            url(../images/bg-pattern-bottom-desktop.svg) no-repeat bottom right;
+    background-size: 36.5em  22.625em, 67.8125em 42.0625em; // 584px 362px, 1085px 673px
+  }
+
+  // TODO Big screens 2560px
+  @include responsive(xxl) {
+    background:
+            url(../images/bg-pattern-top-desktop.svg) no-repeat top left,
+            url(../images/bg-pattern-bottom-desktop.svg) no-repeat bottom right;
+    background-size: 36.5em  22.625em, 67.8125em 42.0625em; // 584px 362px, 1085px 673px
   }
 }
 
 main {
+  /* MOBILE 1st STYLES 375px */
+
   @include flex(column, center, center);
   padding: 4rem 1.5rem; // 64px 24px
 
-  &.responsive {
-    @include responsive-down(xl) {
-      height: 50.0625rem; // 801px
-      @include flex(column, space-between, center);
-      padding: 8rem 10.5rem 6.25rem; // 128px 168px 100px
-    }
+  /* RESPONSIVE STYLES */
+
+  // Tablet 768px
+  @include responsive(m) {
+    padding: 5rem 2rem 6.25rem; // 80px 32px 100px
+  }
+
+  // Laptop 1024px
+  @include responsive(l) {
+    padding: 4rem; // 64px
+  }
+
+  // Desktop 1440px
+  @include responsive(xl) {
+    padding: 8rem 10.5rem 6.25rem; // 128px 168px 100px
   }
 }
 
