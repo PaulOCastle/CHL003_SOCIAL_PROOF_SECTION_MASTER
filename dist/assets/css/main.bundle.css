@@ -66,7 +66,10 @@ a {
   color: black;
 }
 
-/* COMMON STYLES */
+/* TODO:
+ *  1. Responsiveness for xxl size: design & implement
+ *  2. Adjust responsive m, l & xl sizes
+ */
 body {
   /* MOBILE 1st STYLES 375px */
   width: 100vw;
@@ -92,6 +95,12 @@ body {
 @media only screen and (min-width: 90em) {
   body {
     background: url(../images/bg-pattern-top-desktop.svg) no-repeat top left, url(../images/bg-pattern-bottom-desktop.svg) no-repeat bottom right;
+    background-size: 36.5em 22.625em, 67.8125em 42.0625em;
+  }
+}
+@media only screen and (min-width: 160em) {
+  body {
+    background: url(../images/bg-pattern-top-desktop.svg) no-repeat top left, url(../images/bg-pattern-bottom-desktop.svg) no-repeat 50em 7.9375em;
     background-size: 36.5em 22.625em, 67.8125em 42.0625em;
   }
 }
