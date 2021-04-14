@@ -20,9 +20,9 @@ body {
   // Tablet 768px
   @include responsive(m) {
     background:
-            url(../images/bg-pattern-top-desktop.svg) no-repeat top left,
-            url(../images/bg-pattern-bottom-desktop.svg) no-repeat bottom right;
-    background-size: 30.75em  19.0625em, 39.625em 24.5625em; // 492px 305px, 634px 393px
+            url(../images/bg-pattern-top-mobile.svg) no-repeat top,
+            url(../images/bg-pattern-bottom-mobile.svg) no-repeat 30em; // 480px
+    background-size: 27.9375em  17.3125em, 48em 64.375em; // 447px 277px, 768px 1030px
   }
 
   // Laptop 1024px
@@ -46,14 +46,13 @@ body {
     background:
             url(../images/bg-pattern-top-desktop.svg) no-repeat top left,
             url(../images/bg-pattern-bottom-desktop.svg) no-repeat 50em 7.9375em; // 800px 127px
-    background-size: 36.5em  22.625em, 67.8125em 42.0625em; // 1140px 706.64px, 1760px 1091.69px
+    background-size: 71.25em 44.165em, 110em 68.230625em; // 1140px 706.64px, 1760px 1091.69px
   }
 }
 
 main {
   /* MOBILE 1st STYLES 375px */
 
-  @include flex(column, center, center);
   padding: 4rem 1.5rem; // 64px 24px
 
   /* RESPONSIVE STYLES */
@@ -71,6 +70,11 @@ main {
   // Desktop 1440px
   @include responsive(xl) {
     padding: 8rem 10.5rem 6.25rem; // 128px 168px 100px
+  }
+
+  // Big screens 2560px
+  @include responsive(xxl) {
+    padding: 8rem 30rem 6.25rem; // 128px 480px 100px
   }
 }
 

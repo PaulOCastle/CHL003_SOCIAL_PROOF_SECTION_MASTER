@@ -31,21 +31,17 @@
 
     // Tablet 768px
     @include responsive(m) {
-      width: 27.8125rem; // 445px
-      height: 3.5rem; // 56px
+      width: 23.6875rem; // 379px
+      height: 3.5rem; // 48px
       @include flex(row, start, center);
 
-      .stars {
-        width: 11.3125rem; // 181px
-        padding: 0 2rem; // 0 32px
-      }
-
       p {
+        padding: 0 0 0 1rem; // 0 0 0 16px
         text-align: left;
       }
     }
 
-    // Laptop 1024px
+    // TODO Laptop 1024px
     @include responsive(l) {
       width: 27.8125rem; // 445px
       height: 3.5rem; // 56px
@@ -61,7 +57,7 @@
       }
     }
 
-    // Desktop 1440px
+    // TODO Desktop 1440px
     @include responsive(xl) {
       width: 27.8125rem; // 445px
       height: 3.5rem; // 56px
@@ -76,10 +72,15 @@
         text-align: left;
       }
     }
+
+    // TODO Big screens 2560px
+    @include responsive(xxl) {
+
+    }
   }
 
   &.card-review {
-    /* MOBILE 1st STYLES 375px */
+    /* TODO MOBILE 1st STYLES 375px */
 
     width: 20.4375rem; // 327px
     height: 15.5625rem; // 249px
@@ -142,15 +143,20 @@
 
     /* RESPONSIVE STYLES */
 
-    // Tablet 768px
+    // TODO Tablet 768px
 
-    // Laptop 1024px
+    // TODO Laptop 1024px
 
-    // Desktop 1440px
+    // TODO Desktop 1440px
     @include responsive(xl) {
       width: 21.875rem; // 350px
       height: 14.6875rem; // 235px
       padding: 2.5rem 1.8125rem 2rem 2rem; // 40px 29px 32px 32px
+    }
+
+    // TODO Big screens 2560px
+    @include responsive(xxl) {
+
     }
   }
 }
