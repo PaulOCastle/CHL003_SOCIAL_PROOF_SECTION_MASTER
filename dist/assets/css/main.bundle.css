@@ -154,7 +154,7 @@ footer .attribution a {
 }
 .card.card-rate {
   /* MOBILE 1st STYLES 375px */
-  width: 20.4375rem;
+  width: 100%;
   height: 4.9375rem;
   display: flex;
   flex-direction: column;
@@ -229,36 +229,32 @@ footer .attribution a {
 }
 .card.card-review {
   /* MOBILE 1st STYLES 375px */
-  width: 20.4375rem;
+  width: 100%;
   height: 15.5625rem;
-  padding: 2.5rem 1.8rem 2rem 2rem;
+  padding: 2rem 1.875rem;
   background: #502050;
   /* RESPONSIVE STYLES */
 }
 .card.card-review .card-header {
+  width: 100%;
+  height: 2.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  width: 100%;
-  height: 2.5rem;
 }
-.card.card-review .card-header .buyer-avatar {
-  width: 2.5rem;
-  height: 100%;
-}
-.card.card-review .card-header .buyer-avatar img {
+.card.card-review .card-header img {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
 }
 .card.card-review .card-header .buyer-data {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
-  width: 100%;
-  height: 100%;
   padding: 0.1875rem 0 0 1.4375rem;
 }
 .card.card-review .card-header .buyer-data .buyer-name {
@@ -278,7 +274,7 @@ footer .attribution a {
 .card.card-review .card-body {
   width: 100%;
   height: 100%;
-  padding-top: 1.625rem;
+  padding: 1.625rem 0 0 0;
 }
 .card.card-review .card-body p {
   color: #ffffff;
@@ -287,6 +283,39 @@ footer .attribution a {
   line-height: 160%;
   letter-spacing: -0.045em;
 }
+@media only screen and (min-width: 48em) {
+  .card.card-review {
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .card.card-review .card-header {
+    width: 15rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .card.card-review .card-header .buyer-data {
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.65625rem 0;
+  }
+  .card.card-review .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem 0 1rem;
+  }
+}
 @media only screen and (min-width: 90em) {
   .card.card-review {
     width: 21.875rem;
@@ -294,7 +323,6 @@ footer .attribution a {
     padding: 2.5rem 1.8125rem 2rem 2rem;
   }
 }
-
 .hero-section {
   /* MOBILE 1st STYLES 375px */
   width: 100%;
@@ -445,7 +473,6 @@ footer .attribution a {
     justify-content: flex-end;
   }
 }
-
 .reviews-section {
   /* MOBILE 1st STYLES 375px */
   width: 100%;
@@ -466,16 +493,6 @@ footer .attribution a {
 @media only screen and (min-width: 48em) {
   .reviews-section {
     height: 37rem;
-    padding: 2rem 0;
-  }
-  .reviews-section .review-frame {
-    height: 16.6875rem;
-  }
-  .reviews-section :nth-child(2) {
-    justify-content: center;
-  }
-  .reviews-section :nth-child(3) {
-    justify-content: flex-end;
   }
 }
 @media only screen and (min-width: 64em) {
