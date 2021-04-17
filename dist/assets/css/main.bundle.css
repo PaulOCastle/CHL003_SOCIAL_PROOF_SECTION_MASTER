@@ -66,10 +66,6 @@ a {
   color: black;
 }
 
-/* TODO:
- *  1. Responsiveness for xxl size: design & implement
- *  2. Adjust responsive m, l & xl sizes
- */
 body {
   /* MOBILE 1st STYLES 375px */
   width: 100vw;
@@ -107,6 +103,10 @@ body {
 
 main {
   /* MOBILE 1st STYLES 375px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 4rem 1.5rem;
   /* RESPONSIVE STYLES */
 }
@@ -145,7 +145,6 @@ footer .attribution a {
 }
 
 .card {
-  /* MOBILE 1st STYLES 375px */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,9 +152,8 @@ footer .attribution a {
   border-radius: 0.4375rem;
 }
 .card.card-rate {
-  /* MOBILE 1st STYLES 375px */
+  /* Screen Width < 375px */
   width: 100%;
-  height: 4.9375rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -166,11 +164,11 @@ footer .attribution a {
 }
 .card.card-rate .stars {
   width: 7.3125rem;
-  height: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 0 0 1rem;
 }
 .card.card-rate p {
   font-weight: 700;
@@ -182,11 +180,14 @@ footer .attribution a {
 @media only screen and (min-width: 48em) {
   .card.card-rate {
     width: 23.6875rem;
-    height: 3.5rem;
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
+    padding: 1.25rem;
+  }
+  .card.card-rate .stars {
+    margin: 0;
   }
   .card.card-rate p {
     padding: 0 0 0 1rem;
@@ -195,42 +196,48 @@ footer .attribution a {
 }
 @media only screen and (min-width: 64em) {
   .card.card-rate {
-    width: 27.8125rem;
-    height: 3.5rem;
+    width: 25rem;
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
+    padding: 1rem;
   }
   .card.card-rate .stars {
-    width: 11.3125rem;
-    padding: 0 2rem;
+    width: 9.3125rem;
+    padding: 0 1rem;
   }
   .card.card-rate p {
+    padding: 0;
     text-align: left;
   }
 }
 @media only screen and (min-width: 90em) {
   .card.card-rate {
     width: 27.8125rem;
-    height: 3.5rem;
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
+    padding: 1.25rem 2rem;
+  }
+  .card.card-rate .stars {
+    padding: 0 2rem 0 0;
+  }
+}
+@media only screen and (min-width: 160em) {
+  .card.card-rate {
+    width: 40rem;
+    padding: 2rem;
   }
   .card.card-rate .stars {
     width: 11.3125rem;
     padding: 0 2rem;
   }
-  .card.card-rate p {
-    text-align: left;
-  }
 }
 .card.card-review {
-  /* MOBILE 1st STYLES 375px */
+  /* Screen Width < 375px */
   width: 100%;
-  height: 15.5625rem;
   padding: 2rem 1.875rem;
   background: #502050;
   /* RESPONSIVE STYLES */
@@ -285,7 +292,6 @@ footer .attribution a {
 }
 @media only screen and (min-width: 48em) {
   .card.card-review {
-    height: 10rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -313,18 +319,86 @@ footer .attribution a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 2rem 0 1rem;
+    padding: 0.75rem 2rem 0.75rem 1rem;
+  }
+}
+@media only screen and (min-width: 64em) {
+  .card.card-review {
+    width: 17.416875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.5rem 1rem;
+  }
+  .card.card-review .card-header {
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .card.card-review .card-header .buyer-data {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 0.1875rem 0 0 1.4375rem;
+  }
+  .card.card-review .card-body {
+    padding: 1.75rem 0 0.625rem;
   }
 }
 @media only screen and (min-width: 90em) {
   .card.card-review {
     width: 21.875rem;
-    height: 14.6875rem;
-    padding: 2.5rem 1.8125rem 2rem 2rem;
+    padding: 2.5rem 1.875rem 2rem;
   }
 }
+@media only screen and (min-width: 160em) {
+  .card.card-review {
+    width: 31.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2.75rem;
+  }
+  .card.card-review .card-header {
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem 2.3125rem 0;
+  }
+  .card.card-review .card-header img {
+    width: 5rem;
+    height: 5rem;
+  }
+  .card.card-review .card-header .buyer-data {
+    width: auto;
+    height: auto;
+    padding: 1rem 0 0;
+  }
+  .card.card-review .card-header .buyer-data .buyer-verified {
+    margin: 0.3125rem 0 0;
+  }
+  .card.card-review .card-body {
+    width: 17.1875rem;
+    padding: 0;
+  }
+  .card.card-review .card-body p {
+    font-size: 1.125rem;
+  }
+}
+
 .hero-section {
-  /* MOBILE 1st STYLES 375px */
+  /* Screen Width < 375px */
   width: 100%;
   padding: 1rem 0;
   /* RESPONSIVE STYLES */
@@ -368,15 +442,16 @@ footer .attribution a {
 }
 @media only screen and (min-width: 48em) {
   .hero-section {
+    width: 44rem;
+    height: 15.75rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0 0 3rem;
+    padding: 0 0 2rem;
   }
   .hero-section .hero-statement {
-    width: 100%;
-    height: 13.75rem;
+    height: 100%;
     padding: 0 1rem 0 0;
   }
   .hero-section .hero-statement h1 {
@@ -386,44 +461,39 @@ footer .attribution a {
     text-align: left;
   }
   .hero-section .hero-image {
-    width: 100%;
-    height: 13.75rem;
+    height: 100%;
     padding: 1rem 0;
   }
 }
 @media only screen and (min-width: 64em) {
   .hero-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    width: 56rem;
+    height: 15.1875rem;
     padding: 0 0 0.5rem;
   }
   .hero-section .hero-statement {
-    width: auto;
-    height: 14.6875rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 8.75rem 0 0;
+    padding: 0 3rem 0 0;
   }
   .hero-section .hero-statement h1 {
     font-size: 3rem;
-    line-height: 103%;
+    line-height: 3.0625rem;
     text-align: left;
   }
   .hero-section .hero-statement p {
     font-size: 0.9375rem;
-    line-height: 167%;
+    line-height: 1.5625rem;
     text-align: left;
   }
   .hero-section .hero-image {
-    height: 14.6875rem;
-    padding: 1.09375rem 0;
+    width: 29.0625rem;
+    padding: 1rem 0 2.6875rem;
   }
   .hero-section .hero-image .rate-frame {
-    width: 33.625rem;
+    width: 29.0625rem;
   }
   .hero-section .hero-image :nth-child(2) {
     justify-content: center;
@@ -434,47 +504,54 @@ footer .attribution a {
 }
 @media only screen and (min-width: 90em) {
   .hero-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    width: 69.3125rem;
+    height: 16.6875rem;
     padding: 0 0 2rem;
   }
   .hero-section .hero-statement {
-    width: auto;
-    height: 14.6875rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     padding: 0 8.75rem 0 0;
   }
-  .hero-section .hero-statement h1 {
-    font-size: 3rem;
-    line-height: 103%;
-    text-align: left;
-  }
-  .hero-section .hero-statement p {
-    font-size: 0.9375rem;
-    line-height: 167%;
-    text-align: left;
-  }
   .hero-section .hero-image {
-    height: 14.6875rem;
+    height: 100%;
+    width: 33.625rem;
     padding: 1.09375rem 0;
   }
   .hero-section .hero-image .rate-frame {
     width: 33.625rem;
   }
-  .hero-section .hero-image :nth-child(2) {
-    justify-content: center;
+}
+@media only screen and (min-width: 160em) {
+  .hero-section {
+    width: 100rem;
+    height: 22.6875rem;
   }
-  .hero-section .hero-image :nth-child(3) {
-    justify-content: flex-end;
+  .hero-section .hero-statement {
+    width: 100%;
+    padding: 0 10rem 0 0;
+  }
+  .hero-section .hero-statement h1 {
+    font-size: 4rem;
+    line-height: 4.125rem;
+  }
+  .hero-section .hero-statement p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  .hero-section .hero-image {
+    width: 100%;
+  }
+  .hero-section .hero-image .rate-frame {
+    width: 50rem;
   }
 }
+
 .reviews-section {
-  /* MOBILE 1st STYLES 375px */
+  /* Screen Width < 375px */
   width: 100%;
   height: 52.5625rem;
   display: flex;
@@ -492,13 +569,14 @@ footer .attribution a {
 }
 @media only screen and (min-width: 48em) {
   .reviews-section {
+    width: 44rem;
     height: 37rem;
   }
 }
 @media only screen and (min-width: 64em) {
   .reviews-section {
     width: 56rem;
-    height: fit-content;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -518,21 +596,18 @@ footer .attribution a {
 @media only screen and (min-width: 90em) {
   .reviews-section {
     width: 69.375rem;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    height: 19.125rem;
     padding: 2.4375rem 0 0;
   }
+}
+@media only screen and (min-width: 160em) {
+  .reviews-section {
+    width: 100rem;
+    height: 23.875rem;
+    padding: 3.875rem 0 0;
+  }
   .reviews-section .review-frame {
-    height: 16.6875rem;
-  }
-  .reviews-section :nth-child(2) {
-    justify-content: center;
-  }
-  .reviews-section :nth-child(3) {
-    justify-content: flex-end;
+    height: 20rem;
   }
 }
 

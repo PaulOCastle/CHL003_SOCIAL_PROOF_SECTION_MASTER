@@ -1,8 +1,3 @@
-/* TODO:
- *  1. Responsiveness for xxl size: design & implement
- *  2. Adjust responsive m, l & xl sizes
- */
-
 body {
   /* MOBILE 1st STYLES 375px */
 
@@ -53,6 +48,7 @@ body {
 main {
   /* MOBILE 1st STYLES 375px */
 
+  @include flex(column, center, center);
   padding: 4rem 1.5rem; // 64px 24px
 
   /* RESPONSIVE STYLES */
