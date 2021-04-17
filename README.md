@@ -1,91 +1,112 @@
-# Frontend Mentor - Social proof section
+# Frontend Mentor - Social proof section solution - by Pau Ferrer
 
-![Design preview for the Social proof section coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Social proof section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+![Frontend Mentor design](./design/desktop-preview.jpg)
 
-Thanks for checking out this front-end coding challenge.
+## Table of contents
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+## Overview
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this social proof section and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the section depending on their device's screen size
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![Screenshot of my designs of the solution](./design/screenshot.jpg)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Links
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- Solution URL: [github repo](https://github.com/PaulOCastle/CHL003_SOCIAL_PROOF_SECTION_MASTER)
+- Live Site URL: [vercel live view](https://chl-003-social-proof-section-master.vercel.app/)
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Built with
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Mobile-first workflow
+- Figma design for tablet, laptop & big screens design!!
+- Semantic HTML5 markup
+- SCSS custom properties
+- Flexbox
+- Mixins
 
-## Building your project
+### What I learned
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+At the beginning I thought that the challenge was not as complicated as it looked, so I decided, once I've got the 2 designs are given by the free challenge, to design my own tablet, laptop and big screen views. So, I got to practice lots my Figma skills, and I have enjoyed a lot!!!
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+#### Review cards & its frame html code
 
-## Deploying your project
+I like this code because I think it was a good way to position the cards using flexbox and get the design to work easy.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+```html
+<div class="review-frame">
+  <article class="card card-review">
+    <div class="card-header">
+      <img src="./assets/images/image-anne.jpg" alt="Anne Wallace">
+      <div class="buyer-data">
+        <p class="buyer-name">Anne Wallace</p>
+        <p class="buyer-verified">Verified Buyer</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="content">
+        "Put an order with this company and can only praise them for the very high
+        standard. Will definitely use them again and recommend them to everyone!"
+      </p>
+    </div>
+  </article>
+</div>
+```
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+#### My display flex mixin!!
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+I do use flexbox a lot, so I decided to create a easy to use mixin. This is the v1.0 and hope to get to improve it on time to get it to be more flexible and to include all the flexbox properties.
 
-## Create a custom `README.md`
+I think I will give a go to create a function next time...
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+```css
+@mixin flex ($direction: null, $justify: null, $a-items: null) {
+  display: flex;
+  @if $direction != null {flex-direction: $direction;}
+  @if $justify != null {justify-content: $justify;}
+  @if $a-items != null {align-items: $a-items;}
+}
+```
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+### Continued development
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+I would like to keep upskilling on:
 
-## Submitting your solution
+- Mobile first approach
+- HTML5 semantic coding
+- SCSS mixins
+- SCSS functions
+- Be able to identify the different components of the design to break the code in files that are easy and friendly to read and understand
+- Find an arrangement of the SCSS properties that makes sense and is logical - AND STICK TO IT!!!
+- Hopefully practise more JS, as this is the main reason I am here...
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+### Useful resources
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+- [w3schools](https://www.w3schools.com/) - I have used this site a lot to find out the basics of HTML5 and semantics, CSS properties (beginner and advance), and JS. It is not the most advance site, but it explains the concepts easy and in good increments.
+- [google](https://www.google.com) - Other than that I google all my doubts, questions and problems all the time. Just mention the area you want info on (HTML, SASS, CSS, JS, PHP, JAVA, ...) and then the question.
+## Author
 
-## Sharing your solution
+- Website - Not yet ready but working on it!!
+- Frontend Mentor - [@PaulOCastle](https://www.frontendmentor.io/profile/PaulOCastle)
+- Github - [PaulOCastle](https://github.com/PaulOCastle)
 
-There are multiple places you can share your solution:
-
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
-
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
-
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
