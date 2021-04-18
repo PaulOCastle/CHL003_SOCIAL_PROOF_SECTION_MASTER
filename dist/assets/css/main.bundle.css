@@ -407,7 +407,7 @@ footer .attribution a {
   width: 100%;
   padding: 0 0 0.5rem;
 }
-.hero-section .hero-statement h1 {
+.hero-section .hero-statement h2 {
   text-align: center;
   font-weight: 700;
   font-size: 2rem;
@@ -454,7 +454,7 @@ footer .attribution a {
     height: 100%;
     padding: 0 1rem 0 0;
   }
-  .hero-section .hero-statement h1 {
+  .hero-section .hero-statement h2 {
     text-align: left;
   }
   .hero-section .hero-statement p {
@@ -478,7 +478,7 @@ footer .attribution a {
     align-items: flex-start;
     padding: 0 3rem 0 0;
   }
-  .hero-section .hero-statement h1 {
+  .hero-section .hero-statement h2 {
     font-size: 3rem;
     line-height: 3.0625rem;
     text-align: left;
@@ -534,7 +534,7 @@ footer .attribution a {
     width: 100%;
     padding: 0 10rem 0 0;
   }
-  .hero-section .hero-statement h1 {
+  .hero-section .hero-statement h2 {
     font-size: 4rem;
     line-height: 4.125rem;
   }
